@@ -11,6 +11,18 @@ Qiita に投稿する技術記事の企画・調査・執筆・レビューを�
 - Qiita 向けの読みやすい日本語で書く。文体と体裁の目安は `docs/style-guide.md` を参照する。
 - 会社の業務データや機密は一切使わない。
 
+## 参照元(元ネタ)
+
+- 著者の GitHub リポジトリ(`rabut001`)は、記事の元ネタとして使ってよい。一覧は `gh repo list rabut001`、中身は `gh api repos/rabut001/<repo>/...` で読む(ホストで実行)。
+  - 非公開リポジトリの内容は、記事に載せる前にユーザーに確認する。
+  - 会社の業務に関わるリポジトリ(例: `qatools`)は元ネタにしない。迷うものは確認する。
+  - 記事で根拠にしたリポジトリは、URL と commit を research.md に記録する。
+- 著者の過去の Qiita 記事は、ユーザー ID `rabut`(https://qiita.com/rabut)。公開 API `https://qiita.com/api/v2/users/rabut/items?per_page=100&page=<N>` で、一覧と本文を取得できる。認証なしでは閲覧数は取れない(null)。
+  - ネタ出しや執筆の前に、既出の題材との重複を確認する。同じリポジトリから書く場合は、観点を変える。
+  - 関連する過去記事は、冒頭か末尾でリンクする。
+  - 既出の題材との対応は `ideas/README.md` にまとめる。
+- 記事の反応(閲覧数・LGTM・ストック)の日次データは `ideas/data/` に置く。`qiita-dashboard` が毎朝記録したもの。
+
 ## 構成と流れ
 
 - `ideas/`: アイディア。`articles/<slug>/`: 1記事1フォルダ(slug は `YYYYMMDD-topic-name`)。
