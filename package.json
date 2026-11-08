@@ -1,0 +1,9 @@
+{
+  "name": "qiita-articles",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Qiita に投稿する技術記事の企画・調査・執筆・レビューを管理するリポジトリです。",
+  "devDependencies": {
+    "@qiita/qiita-cli": "^1.12.0"
+  }
+}
